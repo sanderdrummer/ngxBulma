@@ -5,6 +5,10 @@
 <div class="container">
   <section class="section">
 
+    <bu-combo-box>
+      <input type="text" placeholder="suche" class="input">
+    </bu-combo-box>
+
     <p (click)="modal.triggerOpen()">trigger modal</p>
 
     <bu-modal #modal>
@@ -33,4 +37,23 @@
       </div>
     </bu-modal>
   </section>
+
+  <bu-field [isLoading]="true" label="test">
+    <input class="input" type="text">
+  </bu-field>
+
+  <div class="field">
+    <p class="control">
+      <input class="input" type="text" placeholder="Disabled input" disabled>
+    </p>
+  </div>
+  <div class="field is-grouped">
+    <p class="control">
+      <button class="button is-primary" disabled>Submit</button>
+    </p>
+    <p class="control">
+      <button class="button" disabled>Cancel</button>
+    </p>
+  </div>
+
 </div>
