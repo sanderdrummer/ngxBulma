@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {BuModalModule} from './bu-modal/bu-modal.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    BuModalModule
   ],
-  declarations: []
+  declarations: [],
+  exports: [BuModalModule]
 })
 export class BulmaModule { }

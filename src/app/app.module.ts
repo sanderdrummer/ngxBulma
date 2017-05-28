@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
+import {BulmaModule} from './bulma/bulma.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DemoComponent } from './demo/demo.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BulmaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

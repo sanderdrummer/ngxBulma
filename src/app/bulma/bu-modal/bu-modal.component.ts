@@ -1,26 +1,34 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'bu-bu-modal',
+  selector: 'bu-modal',
   templateUrl: './bu-modal.component.html',
   styleUrls: ['./bu-modal.component.scss']
 })
 export class BuModalComponent implements OnInit {
-  isVisible: boolean;
+  isActive: boolean;
+  @Output() onOpen  = new EventEmitter();
+  @Output() onClose  = new EventEmitter();
+
+  @HostListener('document:keyup.esc') onESC () {
+    this.triggerClose();
+  }
 
   constructor() {
   }
 
   ngOnInit() {
-    this.isVisible = false;
+    this.isActive = false;
   }
 
-  open(): void {
-
+  triggerOpen(): void {
+    this.isActive = true;
+    this.onOpen.emit();
   }
 
-  close(): void {
-
+  triggerClose(): void {
+    this.isActive = false;
+    this.onClose.emit();
   }
 
 }
