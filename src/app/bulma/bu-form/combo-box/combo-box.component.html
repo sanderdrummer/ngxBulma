@@ -1,3 +1,8 @@
 <bu-field>
-  <ng-content></ng-content>
+  <input type="text" [formControl]="queryControl" name="query" placeholder="suche" class="input">
+  <div class="panel">
+    <p *ngFor="let item of filteredList"
+       (click)="select(item)"
+       class="panel-block">{{item[display]}}</p>
+  </div>
 </bu-field>

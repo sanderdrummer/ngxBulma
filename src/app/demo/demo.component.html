@@ -5,14 +5,18 @@
 <div class="container">
   <section class="section">
 
-    <bu-combo-box>
-      <input type="text" placeholder="suche" class="input">
+    <bu-combo-box [list]="data" [display]="'title'" >
     </bu-combo-box>
+
+    <bu-drop-down>
+      <div class="trigger"><button class="button">DropDown</button></div>
+      <div class="content">Das ist ein Test</div>
+    </bu-drop-down>
 
     <p (click)="modal.triggerOpen()">trigger modal</p>
 
     <bu-modal #modal>
-      <div class="modal-content">
+      <div buClickOutside="" (onClockOutside)="test()" class="modal-content">
         <p class="image is-4by3">
           <img src="http://bulma.io/images/placeholders/1280x960.png">
         </p>

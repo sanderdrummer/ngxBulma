@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'bu-demo',
@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./demo.component.scss']
 })
 export class DemoComponent implements OnInit {
+  data;
 
-  constructor() { }
+  constructor() {
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.data = [
+      {title: 'test1'},
+      {title: 'test2'},
+      {title: 'test3'},
+    ];
+  }
+
+  test() {
+    console.log('das ist ein test');
+  }
 }

@@ -6,6 +6,7 @@ import {HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
 import {DemoComponent} from './demo/demo.component';
 import {BulmaModule} from './bulma/bulma.module';
+import {LayoutModule} from './bulma/shared/layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {BulmaModule} from './bulma/bulma.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    BulmaModule
+    BulmaModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

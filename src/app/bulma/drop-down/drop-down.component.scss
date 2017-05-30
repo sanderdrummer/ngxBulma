@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.drop-down {
+  position: absolute;
+  z-index: 10;
+}
+

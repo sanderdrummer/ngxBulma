@@ -1,0 +1,10 @@
+<div buClickOutside="" (onClockOutside)="triggerClose()">
+  <div (click)="triggerOpen()">
+    <ng-content select=".trigger"></ng-content>
+  </div>
+  <div *ngIf="isActive"
+       class="drop-down box">
+    <ng-content select=".content"></ng-content>
+  </div>
+</div>
+
