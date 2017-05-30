@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
 import {StringFilterService} from '../shared/string-filter.service';
-import {FormControl, Validator} from '@angular/forms';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'bu-combo-box',
@@ -9,7 +9,7 @@ import {FormControl, Validator} from '@angular/forms';
 })
 export class ComboBoxComponent implements OnInit, OnChanges {
 
-  @Input() validators: Validator;
+  @Input() validators;
   @Input() query: string;
   @Input() list: any[];
   @Input() display: string;

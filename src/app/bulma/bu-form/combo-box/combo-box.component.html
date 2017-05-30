@@ -1,8 +1,15 @@
 <bu-field>
-  <input type="text" [formControl]="queryControl" name="query" placeholder="suche" class="input">
-  <div class="panel">
-    <p *ngFor="let item of filteredList"
-       (click)="select(item)"
-       class="panel-block">{{item[display]}}</p>
-  </div>
+  <bu-drop-down>
+    <div class="trigger">
+      <input type="text" [formControl]="queryControl" name="query" placeholder="suche" class="input">
+    </div>
+    <div class="content">
+      <div class="">
+        <p *ngFor="let item of filteredList"
+           (click)="select(item)"
+           class="">{{item[display]}}</p>
+      </div>
+    </div>
+  </bu-drop-down>
+
 </bu-field>
