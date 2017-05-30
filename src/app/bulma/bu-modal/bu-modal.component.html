@@ -1,4 +1,4 @@
-<div [ngClass]="{'is-active':isActive}" class="modal">
+<div *ngIf="isActive" [ngClass]="{'is-active':isActive}" class="modal">
   <div (click)="triggerClose()" class="modal-background"></div>
     <ng-content></ng-content>
 </div>
