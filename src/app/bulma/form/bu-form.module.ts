@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ComboBoxComponent } from './combo-box/combo-box.component';
-import { FieldComponent } from './field/field.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ComboBoxComponent} from './combo-box/combo-box.component';
+import {FieldComponent} from './field/field.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BuDropDownModule} from '../drop-down/bu-drop-down.module';
 
@@ -15,4 +15,5 @@ import {BuDropDownModule} from '../drop-down/bu-drop-down.module';
   exports: [ComboBoxComponent, FieldComponent]
 
 })
-export class BuFormModule { }
+export class BuFormModule {
+}
