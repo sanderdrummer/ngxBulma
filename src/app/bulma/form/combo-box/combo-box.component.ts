@@ -90,6 +90,7 @@ export class ComboBoxComponent implements OnInit, OnChanges {
   }
 
   resetInput() {
+    this.selected = null;
     this.queryControl.reset();
   }
 
